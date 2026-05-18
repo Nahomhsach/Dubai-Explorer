@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Dubai</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+    <div id="particles"></div>
+    <div id="progressBar"></div>
+    <nav class="navbar">
+        <h1>Dubai Explorer</h1>
+    
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#attractions">Attractions</a></li>
+            <li><a href="index.html#food">Food</a></li>
+            <li><a href="index.html#activities">Activities</a></li>
+            <li><a href="index.html#tips">Tips</a></li>
+                <button id="darkModeBtn">Dark Mode</button>
+
+        </ul>
+    </nav>
+
+
+    <header id="home">
+        <div class="overlay">
+            <h2 id="typing"></h2>
+            <p>The City of Luxury, Innovation, and Adventure</p>
+
+            <button onclick="welcomeMessage()">Explore Dubai</button>
+        </div>
+    </header>
+
+    <section class="about">
+        <h2>About Dubai</h2>
+
+        <p>
+            Dubai is one of the most famous cities in the world, known for its luxury lifestyle,
+            futuristic architecture, shopping malls, deserts, and beautiful skyline. Millions of
+            tourists visit every year to experience the culture, attractions, and entertainment.
+        </p>
+    </section>
+
+    <section id="attractions">
+        <h2 class="section-title">Popular Attractions</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop" alt="Burj Khalifa">
+
+                <div class="card-content">
+                    <h3>Burj Khalifa</h3>
+                    <p>The tallest building in the world with amazing city views.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?q=80&w=1200&auto=format&fit=crop" alt="Dubai Mall">
+
+                <div class="card-content">
+                    <h3>Dubai Mall</h3>
+                    <p>One of the largest shopping malls on Earth.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?q=80&w=1200&auto=format&fit=crop" alt="Palm Jumeirah">
+
+                <div class="card-content">
+                    <h3>Palm Jumeirah</h3>
+                    <p>A famous man-made island shaped like a palm tree.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="food">
+        <h2 class="section-title">Foods To Try</h2>
+    
+        <div class="food-buttons">
+            <button onclick="showFood('shawarma')">Shawarma</button>
+            <button onclick="showFood('machboos')">Machboos</button>
+            <button onclick="showFood('luqaimat')">Luqaimat</button>
+        </div>
+    
+        <div class="food-display">
+            <h3 id="foodTitle">Click a food!</h3>
+    
+            <img class="num1" id="foodPic" style="display:none;">
+    
+            <p id="foodText"></p>
+        </div>
+    </section>
+    
+    
+    <section id="activities">
+        <h2 class="section-title">Fun Activities</h2>
+    
+        <div class="activity-list">
+    
+            <a class="activity" href="desert-safari.html">🐪 Desert Safari</a>
+            <a class="activity" href="skiing.html">🏂 Indoor Skiing</a>
+            <a class="activity" href="skydiving.html">🪂 Skydiving</a>
+            <a class="activity" href="jetski.html">🚤 Jet Skiing</a>
+    
+        </div>
+    
+        <div class="video-container">
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                title="Dubai Video"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <section id="tips">
+        <h2 class="section-title">Travel Tips</h2>
+
+        <div class="tips-box">
+
+            <h3>Currency Converter</h3>
+
+            <input type="number" id="usdInput" placeholder="USD Amount">
+
+            <button onclick="convertCurrency()">Convert</button>
+
+            <p id="currencyResult"></p>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Created By Nahom | Dubai Travel Guide Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            document.body.classList.add("loaded");
+        });
+    </script>
+</body>
+</html>

@@ -86,21 +86,16 @@ let text = "Discover Dubai";
 
 let index = 0;
 
-function typeEffect(){
-
-    if(index < text.length){
-
+function typeEffect() {
+    if (index < text.length) {
         document.getElementById("typing").innerHTML += text.charAt(index);
-
         index++;
-
         setTimeout(typeEffect, 120);
-
     }
-
 }
 
-typeEffect();
+setTimeout(typeEffect, 1000);
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -119,9 +114,14 @@ links.forEach(link => {
         link.classList.add("active");
     }
 });
-window.addEventListener("load", function () {
-    document.getElementById("loader").style.display = "none";
-    document.body.classList.add("loaded");
+document.addEventListener("DOMContentLoaded", () => {
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+        loader.style.opacity = "0";
+        loader.style.visibility = "hidden";
+        loader.style.transition = "0.5s ease";
+    }, 800);
 });
 const particleContainer = document.getElementById("particles");
 
